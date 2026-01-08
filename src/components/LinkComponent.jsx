@@ -26,7 +26,7 @@ function LinkComponent({
             }}
           >
             {linkText}
-            <img src={DarkArrow} alt="Arrow" className={LinkStyle.arrowIcon} />
+            {/* <img src={DarkArrow} alt="Arrow" className={LinkStyle.arrowIcon} /> */}
           </button>
         </a>
       ) : (
@@ -41,7 +41,7 @@ function LinkComponent({
             }}
           >
             {linkText}
-            <img src={LightArrow} alt="Arrow" className={LinkStyle.arrowIcon} />
+            {/* <img src={LightArrow} alt="Arrow" className={LinkStyle.arrowIcon} /> */}
           </button>
         </a>
       )}

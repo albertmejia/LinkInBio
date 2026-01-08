@@ -5,14 +5,14 @@ import HomeCSS from "../css/Home.module.css";
 
 function Home() {
   const profileImageSrc = linksData.profileImage;
-  console.log(profileImageSrc);
+
   return (
     <div>
-      <header>
+      {/* <header>
         <h1 style={{ color: styleData.LogoColor || "#0A0A0A" }}>
           {linksData.logo}
         </h1>
-      </header>
+      </header> */}
       <main>
         {profileImageSrc &&
           profileImageSrc !== "Please Provide Profile Image" && (
@@ -25,12 +25,12 @@ function Home() {
               }}
             />
           )}
-        <h2 style={{ color: styleData.NameColor || "#0A0A0A" }}>
+        {linksData.name !== null ? <h2 style={{ color: styleData.NameColor || "#0A0A0A" }}>
           {linksData.name}
-        </h2>
-        <h3 style={{ color: styleData.DesignationColor || "#0A0A0A" }}>
+        </h2> : null}
+        {linksData.designation !== null ? <h3 style={{ color: styleData.DesignationColor || "#0A0A0A" }}>
           {linksData.designation}
-        </h3>
+        </h3>: null}
         <div className={HomeCSS.linkContainer}>
           {linksData.links.map((link, index) => (
             <Link

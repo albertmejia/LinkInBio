@@ -7,16 +7,20 @@
     height: 3.125rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: left;
     padding: 0.938rem 1.125rem;
     text-decoration: none;
     font-size: 1.25rem;
     cursor: pointer;
     border-radius: 0.5rem;
-    font-family: "Abhaya Libre", serif;
+    font-family: "DM Sans", sans-serif;
     font-style: normal;
-    text-transform: uppercase;
+
+    &:hover {
+        opacity: 0.95;
+        transition-duration: 100ms;
+    }
 }
 
 .arrowIcon {
