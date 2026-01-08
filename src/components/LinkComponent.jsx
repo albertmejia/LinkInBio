@@ -1,8 +1,6 @@
 import React from "react";
 import LinkStyle from "../css/LinkComponent.module.css";
 import { styleData } from "../linksData";
-import LightArrow from "../assets/LightArrow.svg";
-import DarkArrow from "../assets/DarkArrow.svg";
 
 function LinkComponent({
   linkText = "LINK",
