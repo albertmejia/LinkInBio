@@ -33,6 +33,16 @@ export const linksData = {
       linkBtn: "Filled",
     },
     {
+      linkText: "Apple Music",
+      linkUrl: "https://music.apple.com/us/artist/summers-over/1896312168",
+      linkBtn: "Filled",
+    },
+    {
+      linkText: "Spotify",
+      linkUrl: "https://open.spotify.com/artist/0hqHmmWsrBiFfjAMytdDFi",
+      linkBtn: "Filled",
+    },
+    {
       linkText: "Bandcamp",
       linkUrl: "https://summersover.bandcamp.com",
       linkBtn: "Filled",
@@ -45,6 +55,11 @@ export const linksData = {
     {
       linkText: "Instagram",
       linkUrl: "https://www.instagram.com/_summers_over_/",
+      linkBtn: "Filled",
+    },
+    {
+      linkText: "Tik Tok",
+      linkUrl: "https://www.tiktok.com/@_summers_over_",
       linkBtn: "Filled",
     },
     {

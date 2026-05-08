@@ -11,11 +11,13 @@
     text-align: left;
     padding: 0.938rem 1.125rem;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 0.8rem;
     cursor: pointer;
     border-radius: 0.5rem;
     font-family: "DM Sans", sans-serif;
     font-style: normal;
+    max-width: 250px;
+    margin: 0 auto;
 
     &:hover {
         opacity: 0.95;
