@@ -1,0 +1,20 @@
+.downloadsList {
+  list-style: none;
+  padding: 0;
+}
+
+.downloadsList li {
+  margin: 0.75rem 0;
+}
+
+.downloadsList a {
+  color: #3E6F4E;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.downloadsList a:hover {
+  color: #5BCF6F;
+  text-decoration: underline;
+}

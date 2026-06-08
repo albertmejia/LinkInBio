@@ -28,6 +28,11 @@ export const linksData = {
   // designation: "Designer & Web Developer",
   links: [
     {
+      linkText: "Free Downloads",
+      linkUrl: "/free-downloads",
+      linkBtn: "Filled",
+    },
+    {
       linkText: "SoundCloud",
       linkUrl: "https://soundcloud.com/summers-over",
       linkBtn: "Filled",
@@ -69,3 +74,30 @@ export const linksData = {
     },
   ],
 };
+
+export const freeDownloadsData = [
+  {
+    title: "infact",
+    url: "https://hypeddit.com/summersover/infact",
+  },
+  {
+    title: "Don Toliver, Nav, Gunna - Lemonade [house remix]",
+    url: "https://hypeddit.com/summersover/lemonade",
+  },
+  {
+    title: "Blowin' Up My Line - Jess Connelley - Mine [remix]",
+    url: "https://hypeddit.com/summersover/blowinupmyline",
+  },
+  {
+    title: "Yeek - Stayin' Low [remix]",
+    url: "https://hypeddit.com/summersover/stayinlow",
+  },
+  {
+    title: "Naomi Sharon - If This Is Love [remix]",
+    url: "https://hypeddit.com/summersover/ifthisislove",
+  },
+  {
+    title: "Pimmie — Bet [edit]",
+    url: "https://hypeddit.com/summersover/pimmie-bet",
+  },
+];

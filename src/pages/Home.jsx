@@ -1,11 +1,10 @@
 import React from "react";
 import { linksData, styleData } from "../linksData";
 import Link from "../components/LinkComponent";
+import ProfileImage from "../components/ProfileImage";
 import HomeCSS from "../css/Home.module.css";
 
 function Home() {
-  const profileImageSrc = linksData.profileImage;
-
   return (
     <div>
       {/* <header>
@@ -14,17 +13,7 @@ function Home() {
         </h1>
       </header> */}
       <main>
-        {profileImageSrc &&
-          profileImageSrc !== "Please Provide Profile Image" && (
-            <img
-              src={profileImageSrc}
-              alt="Profile"
-              className="img"
-              style={{
-                borderRadius: styleData.ProfileImageBorderRadius || "0.75rem",
-              }}
-            />
-          )}
+        <ProfileImage />
         {linksData.name !== null ? <h2 style={{ color: styleData.NameColor || "#0A0A0A" }}>
           {linksData.name}
         </h2> : null}
