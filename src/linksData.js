@@ -19,10 +19,10 @@ export const styleData = {
 };
 
 // Can be a URL, a full file name with extension, or just a file name without extension
-const profileImagePath = "https://i1.sndcdn.com/avatars-Nyutbc9nj4j1TuZC-jzxl5w-t1080x1080.jpg";
+const profileImagePath = "profile";
 
 export const linksData = {
-  logo: "Lnk",
+  logo: "summers over",
   profileImage: resolveProfileImagePath(profileImagePath),
   // name: "Summer's Over",
   // designation: "Designer & Web Developer",
