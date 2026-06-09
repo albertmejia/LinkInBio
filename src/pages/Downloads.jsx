@@ -26,7 +26,7 @@ function Downloads() {
                 </div>
                 <div className={HomeCSS.projectLinkIcon}>
                   <a href={item.url} className={HomeCSS.linkInline} target="_blank" rel="noopener noreferrer">
-                    ↗
+                    ↗&#xFE0E;
                   </a>
                 </div>
               </div>

@@ -49,7 +49,7 @@ function Home() {
                         className={HomeCSS.linkInline}
                         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       >
-                        ↗
+                        ↗&#xFE0E;
                       </a>
                     </div>
                   </div>
