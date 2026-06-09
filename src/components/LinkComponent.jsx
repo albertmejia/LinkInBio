@@ -1,4 +1,6 @@
 import React from "react";
+import DarkArrow from "../assets/DarkArrow.svg";
+import LightArrow from "../assets/LightArrow.svg";
 import LinkStyle from "../css/LinkComponent.module.css";
 import { styleData } from "../linksData";
 
@@ -29,7 +31,7 @@ function LinkComponent({
             }}
           >
             {linkText}
-            {/* <img src={DarkArrow} alt="Arrow" className={LinkStyle.arrowIcon} /> */}
+            <img src={DarkArrow} alt="Arrow" className={LinkStyle.arrowIcon} />
           </button>
         </a>
       ) : (
@@ -48,7 +50,7 @@ function LinkComponent({
             }}
           >
             {linkText}
-            {/* <img src={LightArrow} alt="Arrow" className={LinkStyle.arrowIcon} /> */}
+            <img src={LightArrow} alt="Arrow" className={LinkStyle.arrowIcon} />
           </button>
         </a>
       )}
