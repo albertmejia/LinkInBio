@@ -24,7 +24,8 @@
 
 /* right-hand arrow for each link */
 .btn::after {
-    content: "↗";
+    content: "\2197\FE0E";
+    font-family: inherit;
     position: absolute;
     right: 0;
     top: 50%;

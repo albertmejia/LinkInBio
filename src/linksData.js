@@ -1,5 +1,5 @@
 import { resolveProfileImagePath } from "./utility/ResolveProfileImagePath";
-import soWordmark from "./assets/SO wordmark.png";
+import soWordmark from "./assets/SO-wordmark.png";
 
 // Customizable data, provide hex codes of the colors
 export const styleData = {
