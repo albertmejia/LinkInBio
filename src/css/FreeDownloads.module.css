@@ -18,3 +18,8 @@
   color: #5BCF6F;
   text-decoration: underline;
 }
+
+.downloadsYearRow {
+  padding: 0 0 8px;
+  grid-template-columns: 2rem 1fr 3rem;
+}

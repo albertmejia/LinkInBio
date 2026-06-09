@@ -1,37 +1,63 @@
 import React from "react";
 import { linksData, styleData } from "../linksData";
-import Link from "../components/LinkComponent";
-import ProfileImage from "../components/ProfileImage";
 import HomeCSS from "../css/Home.module.css";
 
 function Home() {
   return (
-    <div>
-      {/* <header>
-        <h1 style={{ color: styleData.LogoColor || "#0A0A0A" }}>
-          {linksData.logo}
-        </h1>
-      </header> */}
-      <main>
-        <ProfileImage />
-        {linksData.name !== null ? <h2 style={{ color: styleData.NameColor || "#0A0A0A" }}>
+    <main>
+      {linksData.name !== null ? (
+        <h2 style={{ color: styleData.NameColor || "#f5f5f5" }}>
           {linksData.name}
-        </h2> : null}
-        {linksData.designation !== null ? <h3 style={{ color: styleData.DesignationColor || "#0A0A0A" }}>
+        </h2>
+      ) : null}
+      {linksData.designation !== null ? (
+        <h3 style={{ color: styleData.DesignationColor || "#e5e5e5" }}>
           {linksData.designation}
-        </h3>: null}
-        <div className={HomeCSS.linkContainer}>
-          {linksData.links.map((link, index) => (
-            <Link
-              key={index}
-              linkText={link.linkText}
-              linkUrl={link.linkUrl}
-              linkBtn={link.linkBtn}
-            />
-          ))}
-        </div>
-      </main>
-    </div>
+        </h3>
+      ) : null}
+      {/* grouped links by category (uses `group` on each link object) */}
+      <div className={HomeCSS.yearList}>
+        {(() => {
+          const grouped = linksData.links.reduce((acc, l) => {
+            const key = l.group || "Other";
+            if (!acc[key]) acc[key] = [];
+            acc[key].push(l);
+            return acc;
+          }, {});
+
+          return Object.keys(grouped).map((group) => (
+            <div key={group}>
+              {grouped[group].map((item, idx) => {
+                const isExternal = !item.linkUrl.startsWith("/") && !item.linkUrl.startsWith("#");
+                return (
+                  <div className={HomeCSS.yearRow} key={`${group}-${idx}`}>
+                    <div className={HomeCSS.yearLabel}>{idx === 0 ? group : ""}</div>
+                    <div className={`${HomeCSS.projectItem} ${item.muted ? HomeCSS.muted : ""}`}>
+                      <a
+                        href={item.linkUrl}
+                        className={HomeCSS.linkInline}
+                        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      >
+                        {item.linkText}
+                      </a>
+                    </div>
+                    <div className={HomeCSS.projectLinkIcon}>
+                      <a
+                        href={item.linkUrl}
+                        className={HomeCSS.linkInline}
+                        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      >
+                        ↗
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ));
+        })()}
+      </div>
+    </main>
   );
 }
 

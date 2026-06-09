@@ -1,25 +1,40 @@
 import React from "react";
-import { freeDownloadsData } from "../linksData";
-import ProfileImage from "../components/ProfileImage";
-import FreeDownloadsCSS from "../css/FreeDownloads.module.css";
+import { freeDownloadsData, linksData } from "../linksData";
+import HomeCSS from "../css/Home.module.css";
+import DownloadCSS from "../css/FreeDownloads.module.css";
 
 function FreeDownloads() {
+  const groupedDownloads = [
+    {
+      group: "DLs",
+      items: freeDownloadsData,
+    },
+  ];
+
   return (
-    <div>
-      <main>
-        <ProfileImage linkToHome={true} />
-        <h1>Free Downloads</h1>
-        <ul className={FreeDownloadsCSS.downloadsList}>
-          {freeDownloadsData.map((download, index) => (
-            <li key={index}>
-              <a href={download.url} target="_blank" rel="noopener noreferrer">
-                {download.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </main>
-    </div>
+    <main>
+      <div className={HomeCSS.yearList}>
+        {groupedDownloads.map((groupObj) => (
+          <div key={groupObj.group}>
+            {groupObj.items.map((item, idx) => (
+              <div className={`${HomeCSS.yearRow} ${DownloadCSS.downloadsYearRow}`} key={`${groupObj.group}-${idx}`}>
+                <div className={HomeCSS.yearLabel}>{idx === 0 ? groupObj.group : ""}</div>
+                <div className={HomeCSS.projectItem}>
+                  <a href={item.url} className={HomeCSS.linkInline} target="_blank" rel="noopener noreferrer">
+                    {item.title}
+                  </a>
+                </div>
+                <div className={HomeCSS.projectLinkIcon}>
+                  <a href={item.url} className={HomeCSS.linkInline} target="_blank" rel="noopener noreferrer">
+                    ↗
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </main>
   );
 }
 
