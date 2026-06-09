@@ -1,19 +1,19 @@
 import React from "react";
-import { freeDownloadsData, linksData } from "../linksData";
+import { downloadsData } from "../linksData";
 import HomeCSS from "../css/Home.module.css";
-import DownloadCSS from "../css/FreeDownloads.module.css";
+import DownloadCSS from "../css/Downloads.module.css";
 
-function FreeDownloads() {
+function Downloads() {
   const groupedDownloads = [
     {
       group: "DLs",
-      items: freeDownloadsData,
+      items: downloadsData,
     },
   ];
 
   return (
     <main>
-      <div className={HomeCSS.yearList}>
+      <div className={HomeCSS.linkList}>
         {groupedDownloads.map((groupObj) => (
           <div key={groupObj.group}>
             {groupObj.items.map((item, idx) => (
@@ -38,4 +38,4 @@ function FreeDownloads() {
   );
 }
 
-export default FreeDownloads;
+export default Downloads;

@@ -1,16 +1,17 @@
 import { resolveProfileImagePath } from "./utility/ResolveProfileImagePath";
+import soWordmark from "./assets/SO wordmark.png";
 
 // Customizable data, provide hex codes of the colors
 export const styleData = {
-  AppBackgroundColor: "#FAFAF7",
+  AppBackgroundColor: "#080808",
   LogoColor: "",
   ProfileImageBorderRadius: "",
   NameColor: "",
   DesignationColor: "",
   OutlineButtonStyle: {
-    buttonBackgroundColor: "",
-    buttonTextColor: "#1F1F1F",
-    buttonBorderColor: "",
+    buttonBackgroundColor: "transparent",
+    buttonTextColor: "#f5f5f5",
+    buttonBorderColor: "#f5f5f5",
   },
   FilledButtonStyle: {
     buttonBackgroundColor: "#1F1F1F",
@@ -24,58 +25,70 @@ const profileImagePath = "profile";
 export const linksData = {
   logo: "summers over",
   profileImage: resolveProfileImagePath(profileImagePath),
+  // wordmark: filename (without extension) placed in src/assets/profileImage/
+  // Imported wordmark from src/assets
+  wordmark: soWordmark,
   // name: "Summer's Over",
   // designation: "Designer & Web Developer",
   links: [
     {
-      linkText: "Free Downloads",
-      linkUrl: "/free-downloads",
+      linkText: "Downloads",
+      linkUrl: "/downloads",
       linkBtn: "Filled",
+      group: "Music",
     },
     {
       linkText: "SoundCloud",
       linkUrl: "https://soundcloud.com/summers-over",
       linkBtn: "Filled",
+      group: "Music",
     },
     {
       linkText: "Apple Music",
       linkUrl: "https://music.apple.com/us/artist/summers-over/1896312168",
       linkBtn: "Filled",
+      group: "Music",
     },
     {
       linkText: "Spotify",
       linkUrl: "https://open.spotify.com/artist/0hqHmmWsrBiFfjAMytdDFi",
       linkBtn: "Filled",
+      group: "Music",
     },
     {
       linkText: "Bandcamp",
       linkUrl: "https://summersover.bandcamp.com",
       linkBtn: "Filled",
+      group: "Music",
     },
     {
       linkText: "YouTube",
       linkUrl: "https://www.youtube.com/@summers_over_tv",
       linkBtn: "Filled",
+      group: "Music",
     },
     {
       linkText: "Instagram",
       linkUrl: "https://www.instagram.com/_summers_over_/",
       linkBtn: "Filled",
+      group: "Socials",
     },
     {
       linkText: "Tik Tok",
       linkUrl: "https://www.tiktok.com/@_summers_over_",
       linkBtn: "Filled",
+      group: "Socials",
     },
     {
       linkText: "email",
       linkUrl: "mailto:hello@summers-over.com",
       linkBtn: "Filled",
+      group: "Contact",
     },
   ],
 };
 
-export const freeDownloadsData = [
+export const downloadsData = [
   {
     title: "infact",
     url: "https://hypeddit.com/summersover/infact",

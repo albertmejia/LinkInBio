@@ -4,7 +4,7 @@ import Loader from "./components/Loader";
 import SharedHeader from "./components/SharedHeader";
 import HomeCSS from "./css/Home.module.css";
 const Home = lazy(() => import("./pages/Home"));
-const FreeDownloads = lazy(() => import("./pages/FreeDownloads"));
+const Downloads = lazy(() => import("./pages/Downloads"));
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             <Suspense fallback={<Loader />}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/downloads" element={<FreeDownloads />} />
+                <Route path="/downloads" element={<Downloads />} />
                 <Route path="/free-downloads" element={<Navigate to="/downloads" replace />} />
               </Routes>
             </Suspense>

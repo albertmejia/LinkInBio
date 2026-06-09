@@ -7,19 +7,24 @@ function LinkComponent({
   linkUrl = "#",
   linkBtn = " Outline",
 }) {
+  const isExternal = !linkUrl.startsWith("/") && !linkUrl.startsWith("#");
   return (
     <div>
       {linkBtn === "Outline" ? (
-        <a href={linkUrl} className={LinkStyle.aBtn}>
+        <a
+          href={linkUrl}
+          className={LinkStyle.aBtn}
+          {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
           <button
             className={LinkStyle.btn}
             style={{
               backgroundColor:
                 styleData.OutlineButtonStyle.buttonBackgroundColor ||
                 "transparent",
-              color: styleData.OutlineButtonStyle.buttonTextColor || "#0A0A0A",
+              color: styleData.OutlineButtonStyle.buttonTextColor || "#f5f5f5",
               border: `1px solid ${
-                styleData.OutlineButtonStyle.buttonBorderColor || "#0A0A0A"
+                styleData.OutlineButtonStyle.buttonBorderColor || "#f5f5f5"
               }`,
             }}
           >
@@ -28,7 +33,11 @@ function LinkComponent({
           </button>
         </a>
       ) : (
-        <a href={linkUrl} className={LinkStyle.aBtn}>
+        <a
+          href={linkUrl}
+          className={LinkStyle.aBtn}
+          {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
           <button
             className={LinkStyle.btn}
             style={{
