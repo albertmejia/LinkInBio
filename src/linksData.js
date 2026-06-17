@@ -51,7 +51,7 @@ export const linksData = {
     },
     {
       linkText: "Spotify",
-      linkUrl: "https://open.spotify.com/artist/0hqHmmWsrBiFfjAMytdDFi",
+      linkUrl: "https://open.spotify.com/artist/7cINwzGZA1cbN0Oe6zvhOS",
       linkBtn: "Filled",
       group: "Music",
     },
