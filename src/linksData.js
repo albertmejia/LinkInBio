@@ -90,6 +90,10 @@ export const linksData = {
 
 export const downloadsData = [
   {
+    title: "2HARD4THERADIO [remix]",
+    url: "https://hypeddit.com/summersover/2hard4theradioremixverseintro",
+  },
+  {
     title: "infact",
     url: "https://hypeddit.com/summersover/infact",
   },
