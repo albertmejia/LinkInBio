@@ -23,3 +23,73 @@
   padding: 0 0 8px;
   grid-template-columns: 2rem 1fr 3rem;
 }
+
+.detailHeader {
+  margin-bottom: 1.5rem;
+}
+
+.detailHeader h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.45rem;
+}
+
+.detailSubtitle {
+  margin: 0;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.previewWrapper {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  min-height: 280px;
+  background: #101010;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.previewFrame {
+  width: 100%;
+  min-height: 280px;
+  border: 0;
+}
+
+.previewMissing {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  color: #f5f5f5;
+  background: #111;
+  border-radius: 1rem;
+}
+
+.ctaBlock {
+  margin-bottom: 1.25rem;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 20rem;
+  padding: 0.95rem 1rem;
+  background: #5cbf6f;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.downloadNote {
+  margin-bottom: 1.5rem;
+  color: #d0d0d0;
+  line-height: 1.8;
+}
+
+.backRow {
+  margin-top: 1rem;
+}
+
+.backLink {
+  color: #f5f5f5;
+}

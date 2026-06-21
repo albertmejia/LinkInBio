@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { downloadsData } from "../linksData";
 import HomeCSS from "../css/Home.module.css";
 import DownloadCSS from "../css/Downloads.module.css";
@@ -20,14 +21,14 @@ function Downloads() {
               <div className={`${HomeCSS.yearRow} ${DownloadCSS.downloadsYearRow}`} key={`${groupObj.group}-${idx}`}>
                 <div className={HomeCSS.yearLabel}>{idx === 0 ? groupObj.group : ""}</div>
                 <div className={HomeCSS.projectItem}>
-                  <a href={item.url} className={HomeCSS.linkInline} target="_blank" rel="noopener noreferrer">
+                  <Link to={`/downloads/${item.slug}`} className={HomeCSS.linkInline}>
                     {item.title}
-                  </a>
+                  </Link>
                 </div>
                 <div className={HomeCSS.projectLinkIcon}>
-                  <a href={item.url} className={HomeCSS.linkInline} target="_blank" rel="noopener noreferrer">
+                  <Link to={`/downloads/${item.slug}`} className={HomeCSS.linkInline}>
                     ↗&#xFE0E;
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

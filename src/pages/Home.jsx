@@ -3,6 +3,16 @@ import { linksData, styleData } from "../linksData";
 import HomeCSS from "../css/Home.module.css";
 
 function Home() {
+  const trackLinkClick = (item) => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "home_link_click", {
+        event_category: "home_links",
+        event_label: item.linkText,
+        link_url: item.linkUrl,
+      });
+    }
+  };
+
   return (
     <main>
       <div className={HomeCSS.pageIntro}>
@@ -38,6 +48,7 @@ function Home() {
                       <a
                         href={item.linkUrl}
                         className={HomeCSS.linkInline}
+                        onClick={() => trackLinkClick(item)}
                         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       >
                         {item.linkText}
@@ -47,6 +58,7 @@ function Home() {
                       <a
                         href={item.linkUrl}
                         className={HomeCSS.linkInline}
+                        onClick={() => trackLinkClick(item)}
                         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       >
                         ↗&#xFE0E;
