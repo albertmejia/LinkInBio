@@ -50,3 +50,9 @@ h3 {
   padding: 0;
   color: #e5e5e5;
 }
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.25rem 1rem;
+  }
+}
