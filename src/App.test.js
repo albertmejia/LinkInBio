@@ -1,8 +1,18 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
+
+jest.mock('./utility/ResolveProfileImagePath', () => ({
+  resolveProfileImagePath: jest.fn((imagePath) => imagePath),
+}));
+
 import App from './App';
 
-test('renders learn react link', () => {
+test('shows the new downloads on the downloads route', async () => {
+  window.history.pushState({}, '', '/downloads');
+
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  await waitFor(() => {
+    expect(screen.getByText('MTNS - Lost Track Of Time edit')).toBeInTheDocument();
+    expect(screen.getByText('Put Your Hands Where My Eyes Could See')).toBeInTheDocument();
+  });
 });
