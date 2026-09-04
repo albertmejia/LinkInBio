@@ -90,6 +90,12 @@ export const linksData = {
 
 export const downloadsData = [
   {
+    slug: "drake-x-loe-shimmy-im-spent",
+    title: "Drake x Loe Shimmy - I'm Spent",
+    url: "/downloads/summers%20over%20-%20i%27m%20spent%20(110%20bpm).wav",
+    previewEmbedUrl: '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2394650901&color=%235cbf6f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/summers-over" title="summers over" target="_blank" style="color: #cccccc; text-decoration: none;">summers over</a> · <a href="https://soundcloud.com/summers-over/drake-x-loe-shimmy-im-spent" title="Drake x Loe Shimmy - I&#x27;m Spent [remix]  [110bpm]" target="_blank" style="color: #cccccc; text-decoration: none;">Drake x Loe Shimmy - I&#x27;m Spent [remix]  [110bpm]</a></div>',
+  },
+  {
     slug: "put-your-hands-where-my-eyes-could-see",
     title: "Put Your Hands Where My Eyes Could See",
     url: "/downloads/summers%20over%20-%20Put%20Your%20Hands%20Where%20My%20Eyes%20Could%20See%20remix.mp3",

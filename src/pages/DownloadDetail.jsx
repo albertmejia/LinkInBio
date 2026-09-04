@@ -1,12 +1,19 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { downloadsData } from "../linksData";
+import { downloadsData, linksData } from "../linksData";
 import HomeCSS from "../css/Home.module.css";
 import DownloadCSS from "../css/Downloads.module.css";
 
 function DownloadDetail() {
   const { slug } = useParams();
   const item = downloadsData.find((download) => download.slug === slug);
+  const supportLinks = linksData.links.filter(
+    ({ linkText }) => linkText !== "Downloads" && linkText !== "email"
+  ).sort((firstLink, secondLink) => {
+    if (firstLink.group === "Socials" && secondLink.group !== "Socials") return -1;
+    if (firstLink.group !== "Socials" && secondLink.group === "Socials") return 1;
+    return 0;
+  });
 
   if (!item) {
     return (
@@ -76,8 +83,22 @@ function DownloadDetail() {
           This one's on the house. No download gates.
         </p>
         <p>
-          If you enjoy the music, consider a follow, share, save, or repost. Every bit of support goes a long way. Thanks for listening. 🤝
+          If you enjoy the music, consider a follow, share, save, or repost. Every bit of support goes a long way.
         </p>
+        <nav className={DownloadCSS.supportLinks} aria-label="Follow and listen">
+          {supportLinks.map((link) => (
+            <a
+              key={link.linkText}
+              href={link.linkUrl}
+              target="_blank"
+              rel="noreferrer"
+              className={DownloadCSS.supportLink}
+            >
+              {link.linkText}
+            </a>
+          ))}
+        </nav>
+        <p>Thanks for listening. 🤝</p>
       </div>
 
       <div className={DownloadCSS.backRow}>
