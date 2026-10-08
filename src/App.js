@@ -6,6 +6,7 @@ import HomeCSS from "./css/Home.module.css";
 const Home = lazy(() => import("./pages/Home"));
 const Downloads = lazy(() => import("./pages/Downloads"));
 const DownloadDetail = lazy(() => import("./pages/DownloadDetail"));
+const Mixes = lazy(() => import("./pages/Mixes"));
 
 function RouteChangeTracker() {
   const location = useLocation();
@@ -29,7 +30,7 @@ function RouteChangeTracker() {
 
 function App() {
   return (
-    <div className="App" style={{ maxWidth: "31.25rem" }}>
+    <div className="App" style={{ width: "100%", maxWidth: "31.25rem" }}>
       <Router>
         <RouteChangeTracker />
         <div className={HomeCSS.page}>
@@ -40,6 +41,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/downloads" element={<Downloads />} />
                 <Route path="/downloads/:slug" element={<DownloadDetail />} />
+                <Route path="/mixes" element={<Mixes />} />
                 <Route path="/free-downloads" element={<Navigate to="/downloads" replace />} />
               </Routes>
             </Suspense>

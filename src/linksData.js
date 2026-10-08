@@ -38,6 +38,12 @@ export const linksData = {
       group: "Music",
     },
     {
+      linkText: "Mixes",
+      linkUrl: "/mixes",
+      linkBtn: "Filled",
+      group: "Music",
+    },
+    {
       linkText: "SoundCloud",
       linkUrl: "https://soundcloud.com/summers-over",
       linkBtn: "Filled",

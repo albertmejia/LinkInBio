@@ -48,10 +48,21 @@
   overflow: hidden;
 }
 
+.mixPreviewWrapper {
+  width: 100%;
+  max-width: 460px;
+}
+
 .previewFrame {
   width: 100%;
   min-height: 280px;
   border: 0;
+}
+
+.previewWrapper iframe {
+  display: block;
+  height: 300px;
+  min-height: 300px;
 }
 
 .previewMissing {
